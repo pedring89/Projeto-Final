@@ -1,0 +1,56 @@
+header {
+    background: linear-gradient(to bottom,  #1f499c, #1e2742);
+    color: white;
+    padding: 10px;
+}
+
+header h1 {
+    color: #7d4f17;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.384);
+}
+menu {
+    text-align: center;
+    display: none;
+}
+
+#menu {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+}
+
+menu > ul > li {
+    margin: 0px;
+    padding: 10px;
+}
+
+menu a {
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+menu a:hover {
+    color:#1e2742;
+    background-color: #4a618e;
+}
+
+@media screen and (min-width: 700px){
+    menu {
+        display: block;
+    }
+    
+    #menu {
+        display: none;
+    }
+
+    menu > ul > li {
+        display: inline;
+    }
+
+}
