@@ -6,6 +6,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media-query.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body onresize="mudouTamanho()">
@@ -17,29 +18,22 @@
             <div id="form">
                 <h1>Login</h1>
                 <p>Seja bem vindo(a) novamente. Faça login para acessar sua conta</p>
-                <form action="php/login.php" method="post">
-        
+                <form action="php/login.php" method="post" autocomplete="on">
+                    <div class="campo"> 
+                        <i class="material-icons">person</i>
+                        <input type="email" name="loin" id="ilogin" placeholder="Seu e-mail" autocomplete="email" required maxlength="30">
+                        <label for="ilogin">Login:</label>
+                    </div>
+                    <div class="campo">
+                        <i class="material-icons">vpn_key</i>
+                        <input type="password" name="senha" id="isenha" placeholder="Sua senha" autocomplete="current-password" required minlength="8" maxlength="20">
+                          <label for="isenha">Senha:</label>
+                    </div>
+                    <input type="submit" value="Entrar">
+                    <a href="esqueci.html">Esqueci a senha<i class="material-icons">mail</i></a>
                 </form>
             </div>
         </section>
     </main>
-
-    <script>
-        function clickMenu(){
-            if(itens.style.display == 'block'){
-                itens.style.display = 'none'
-            } else {
-                itens.style.display = 'block'
-            }
-        }
-
-        function mudouTamanho(){
-            if(window.innerWidth >= 700){
-                itens.style.display = 'block'
-            } else {
-                itens.style.display = 'none'
-            }
-        }
-    </script>
 </body>
 </html>
