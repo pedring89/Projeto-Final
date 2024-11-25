@@ -5,21 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
-<body>
-    <section id="login">
-        <div id="img">
-            foto
-        </div>
-
-        <div id="form">
-            <h1>Login</h1>
-            <p>Seja bem vindo(a) novamente. Faça login para acessar sua conta</p>
-            <form action="php/login.php" method="post">
-
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>HW Shopping</h1>
+        <i id="menu" class="material-icons" onclick="clickMenu()">menu</i>
+        <menu id="itens">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Compras</a></li>
+                <li><a href="#">Vendas</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <section id="login">
+            <div id="img">
                 
-            </form>
-        </div>
-    </section>
+            </div>
+            <div id="form">
+                <h1>Login</h1>
+                <p>Seja bem vindo(a) novamente. Faça login para acessar sua conta</p>
+                <form action="php/login.php" method="post">
+        
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function clickMenu(){
+            if(itens.style.display == 'block'){
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+
+        function mudouTamanho(){
+            if(window.innerWidth >= 700){
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+    </script>
 </body>
 </html>
